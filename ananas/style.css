@@ -96,8 +96,7 @@ footer{
 
 .bgimg1{
     background-image: url(img/anh3.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: 100% ;
 }
 .bgimg2{
     background-image: url(img/anh4.jpg);

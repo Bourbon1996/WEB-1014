@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.top1{
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; 
+    padding: 8px 50px;
+    font-size:  13px;
+}
+.top2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+.menu ul{
+    display: flex;
+    gap: 15px;
+
+}
+ .menu li{
+    position: relative;
+
+}
+.sub_shoes, .sub_collections{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+.menu li:hover > .sub_shoes,
+.menu li:hover > .sub_collections {
+    display: block;
+}
+
+/* .title {
+    text-align: center;
+    margin: 40px 0;          
+    position: relative;      
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+}
+
+.title h2 {
+    font-size: 24px;         
+    font-weight: bold;       
+    margin: 0 20px;          
+    text-transform: uppercase; 
+    color: #333;             
+}
+
+
+.title::before,
+.title::after {
+    content: "";             
+    height: 1px;             
+    background-color: #ddd;  
+    flex: 1;                 
+    max-width: 200px;        
+} */
+
+section:nth-of-type(1) {
+    display: flex;            
+    justify-content: center; 
+    gap: 75px;                
+    padding: 50px;           
+}
+
+
+.product1, .product2, .product3, .product4 {
+    width: 22%;               
+    position: relative;       
+    text-align: center;       
+}
+
+
+.discout {
+    position: absolute;       
+    top: 10px;                
+    right: 10px;              
+    background-color: red;  
+    color: #fff;             
+    padding: 3px 7px;      
+    font-size: 12px;          
+    z-index: 10;              
+}
+
+
+.option {
+    position: absolute;      
+    bottom: 85px;             
+    left: 0;                 
+    width: 100%;              
+    background-color: #e7272d;
+    color: white;             
+    padding: 12px 0;          
+    font-weight: bold;        
+    opacity: 0;               
+    transition: 0.3s ease;    
+}
+
+.product1:hover .option, 
+.product2:hover .option, 
+.product3:hover .option, 
+.product4:hover .option {
+    opacity: 1;               
+}
+.type {
+    display: flex;            /* Dàn 3 khối nằm ngang */
+    justify-content: center;  /* Đưa cả cụm vào giữa */
+    gap: 15px;                /* Khoảng cách giữa 3 tấm hình */
+    padding: 10px 300px;       /* Cách lề trên dưới 20px, trái phải 50px */
+}
+
+/* 3. Định dạng hình ảnh bên trong */
+.type img {
+    width: 100%;               /* Ảnh luôn rộng vừa khít khung div */
+    height: 300px;              /* Tự động điều chỉnh chiều cao theo tỉ lệ ảnh */
+    display: block;            /* Xóa bỏ khoảng hở thừa dưới chân ảnh mặc định */
+    transition: 0.5s ease-out; /* HIỆU ỨNG MƯỢT MÀ: Giúp hành động zoom diễn ra trong 0.5 giây.
+                                 'ease-out' giúp chuyển động chậm dần lại ở cuối rất 'sang'. */
+}
+
+/* 4. HIỆU ỨNG HOVER: Phóng to (Zoom) ảnh khi rê chuột vào */
+.type div:hover img {
+    transform: scale(1.03);    /* PHÓNG TO 1 CHÚT: Chỉ to lên 3% (1.03).
+                                 Nếu Đức thấy vẫn to quá, hãy đổi thành 1.02 (to 2%). */
+    cursor: pointer;           /* Hiện hình bàn tay để người dùng biết có thể click */
+}
