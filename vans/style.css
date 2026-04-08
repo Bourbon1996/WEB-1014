@@ -1,144 +1,564 @@
+/* Hearder start */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+
+body{
+    overflow-x: hidden;
 }
 ul{
     list-style: none;
 }
-.top1{
+.top1 {
     background-color: #1a1a1a;
     color: #fff;
     display: flex;
-    justify-content: space-between; 
-    padding: 8px 50px;
-    font-size:  13px;
-}
-.top2{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 15px 10%;
+    font-size: 14px;
+    
 }
-.menu ul{
+.top1 ul{
+    list-style: none;
+}
+
+.top1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.top2 {
     display: flex;
-    gap: 15px;
-
+    align-items: center; 
+    padding: 15px 5%;
+    background-color: #fff;
+    justify-content: space-between;
+    gap:20px;
 }
- .menu li{
-    position: relative;
 
+/* Logo */
+.logo img {
+    width: 200px;
+    display: block;
 }
-.sub_shoes, .sub_collections{
-    display: none;
-    position: absolute;
-    top: 100%;
+
+
+.menu {
+    flex: 1; 
+} 
+
+.menu > ul {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 12px 25px;        
+    list-style: none;
+}
+
+.menu > ul > li {
+    position: relative;   
+    padding: 5px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Nút HOME PAGE màu đỏ */
+.menu > ul > li:first-child a {
+    background-color: #e7272d;
+    color: #fff;
+    padding: 8px 15px;
+}
+
+/* Hiệu ứng khi di chuột vào các mục menu chính */
+.menu > ul > li:hover > a {
+    color: #e7272d;
+}
+
+/* SUB MENU */
+.sub_shoes, .sub_collections {
+    display: none;          
+    position: absolute;     
+    top: 100%;              
     left: 0;
     background-color: #fff;
-    z-index: 100;
+    min-width: 180px;       
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    border-top: 2px solid #e7272d; 
+    z-index: 1000;         
+    padding: 10px 0;
 }
+
+/* Khi di chuột vào Li cha thì hiện UL con */
 .menu li:hover > .sub_shoes,
 .menu li:hover > .sub_collections {
     display: block;
 }
 
-/* .title {
-    text-align: center;
-    margin: 40px 0;          
-    position: relative;      
-    display: flex;          
-    align-items: center;     
-    justify-content: center; 
+/* Các mục bên trong menu con */
+.sub_shoes li, .sub_collections li {
+    padding: 0;
 }
 
-.title h2 {
-    font-size: 24px;         
-    font-weight: bold;       
-    margin: 0 20px;          
-    text-transform: uppercase; 
+.sub_shoes a, .sub_collections a {
+    display: block;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 12px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.sub_shoes a:hover, .sub_collections a:hover {
+    background-color: #f9f9f9;
+    padding-left: 25px; 
+}
+
+.sub_shoes li a, 
+.sub_collections li a {
+    display: block;          
+    padding: 12px 20px;      
     color: #333;             
+    background-color: #fff;  
+    text-decoration: none;
+    transition: 0.2s;        
+    font-size: 14px;
+    font-weight: 500;
 }
 
+/* đổi màu khi nền khi di chuột */
+.sub_shoes li a:hover, 
+.sub_collections li a:hover {
+    background-color: #e7272d; 
+    color: #ffffff;            
+}
+/*ICONS */
+.click {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-.title::before,
-.title::after {
-    content: "";             
-    height: 1px;             
+.search {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 80px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.cart {
+    position: relative;
+    font-size: 18px;
+}
+
+.count {
+    background-color: #e7272d;
+    color: #fff;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+/* Heard end */
+
+.banner{
+    width: 100%;
+}
+.banner img{
+    object-fit: cover;
+}
+/*  section */
+/* Khối bao quanh toàn bộ phần sản phẩm */
+.product {
+    display: flex;            /* Dàn hàng ngang */
+    flex-wrap: wrap;          /* Cho phép xuống dòng nếu cần */
+    justify-content: center;  /* Căn giữa cụm sản phẩm */
+    gap: 20px;                
+    padding: 50px 2%;         
+}
+
+/* Tiêu đề Best Seller có 2 thanh ngang */
+.title {
+    width: 100%;             
+    display: flex;
+    align-items: center;      
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.title::before, .title::after {
+    content: "";
+    height: 1px;
     background-color: #ddd;  
-    flex: 1;                 
-    max-width: 200px;        
-} */
-
-section:nth-of-type(1) {
-    display: flex;            
-    justify-content: center; 
-    gap: 75px;                
-    padding: 50px;           
+    flex: 1;                  
+    max-width: 250px;         
+}
+.title a {
+    text-decoration: none; 
+    color: #333; 
+    transition: 0.3s; 
+}
+.title a:hover {
+    color: #e7272d; 
+    text-decoration: none; 
+}
+.title a:hover h2 {
+    color: #e7272d;
 }
 
-
-.product1, .product2, .product3, .product4 {
+/* Từng khối sản phẩm */
+.product_item {
     width: 22%;               
     position: relative;       
-    text-align: center;       
+    text-align: center;
+    overflow: hidden;         
 }
 
+/* Hiệu ứng Zoom ảnh nhẹ */
+.product_item img {
+    width: 100%;
+    transition: transform 0.5s ease; /* Chuyển động mượt trong 0.5s */
+}
 
+.product_item:hover img {
+    transform: scale(1.05);   
+}
+
+/* Nhãn -10% màu đỏ */
 .discout {
-    position: absolute;       
-    top: 10px;                
-    right: 10px;              
-    background-color: red;  
-    color: #fff;             
-    padding: 3px 7px;      
-    font-size: 12px;          
-    z-index: 10;              
-}
-
-
-.option {
-    position: absolute;      
-    bottom: 85px;             
-    left: 0;                 
-    width: 100%;              
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: #e7272d;
-    color: white;             
-    padding: 12px 0;          
-    font-weight: bold;        
-    opacity: 0;               
-    transition: 0.3s ease;    
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 10;
 }
 
-.product1:hover .option, 
-.product2:hover .option, 
-.product3:hover .option, 
-.product4:hover .option {
-    opacity: 1;               
+/* Nút TÙY CHỌN trượt lên khi hover */
+.option {
+    position: absolute;
+    bottom: -50px; /* Giấu bên dưới */
+    left: 0;
+    width: 100%;
+    transition: 0.4s ease;
+    opacity: 0;
+    z-index: 20;
 }
+
+.option a {
+    display: block;
+    background-color: #e7272d;
+    color: #ffffff !important; 
+    text-decoration: none !important; 
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.product_item:hover .option {
+    bottom: 80px;             /* Trượt lên trên phần chữ */
+    opacity: 1;               /* Hiện hình */
+}
+
+/* Xử lý tên giày dấu ... */
+.name {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    white-space: nowrap;       /* Buộc chữ nằm trên 1 dòng */
+    overflow: hidden;          /* Ẩn phần thừa */
+    text-overflow: ellipsis;   /* Thêm dấu ... */
+    padding: 0 5px;
+}
+.name  a{
+    text-decoration: none !important;
+}
+.brand a{
+    text-decoration: none !important;
+}
+
+/* Khi di chuột vào hiện hết tên */
+.product_item:hover .name {
+    white-space: normal;       /* Cho phép xuống dòng hiện hết chữ */
+    overflow: visible;
+}
+
+.price { color: #e7272d; font-weight: bold; }
+.old_price { text-decoration: line-through; color: #999; font-size: 12px; margin-left: 10px; }
+ /* section end  */
+/* type start */
 .type {
-    display: flex;            /* Dàn 3 khối nằm ngang */
-    justify-content: center;  /* Đưa cả cụm vào giữa */
-    gap: 15px;                /* Khoảng cách giữa 3 tấm hình */
-    padding: 10px 300px;       /* Cách lề trên dưới 20px, trái phải 50px */
+    display: flex;
+    justify-content: center; 
+    gap: 30px;               
+    max-width: 1200px;       
+    margin: 0 auto 50px;     
+    padding: 20px 15px;      
 }
 
-/* 3. Định dạng hình ảnh bên trong */
+.type div {
+    flex: 1;                 
+    max-width: 380px;       
+    overflow: hidden;
+}
+
 .type img {
-    width: 100%;               /* Ảnh luôn rộng vừa khít khung div */
-    height: 300px;              /* Tự động điều chỉnh chiều cao theo tỉ lệ ảnh */
-    display: block;            /* Xóa bỏ khoảng hở thừa dưới chân ảnh mặc định */
-    transition: 0.5s ease-out; /* HIỆU ỨNG MƯỢT MÀ: Giúp hành động zoom diễn ra trong 0.5 giây.
-                                 'ease-out' giúp chuyển động chậm dần lại ở cuối rất 'sang'. */
+    width: 100%;
+    transition: 0.5s;
+    display: block;
 }
 
-/* 4. HIỆU ỨNG HOVER: Phóng to (Zoom) ảnh khi rê chuột vào */
 .type div:hover img {
-    transform: scale(1.03);    /* PHÓNG TO 1 CHÚT: Chỉ to lên 3% (1.03).
-                                 Nếu Đức thấy vẫn to quá, hãy đổi thành 1.02 (to 2%). */
-    cursor: pointer;           /* Hiện hình bàn tay để người dùng biết có thể click */
+    transform: scale(1.05);
 }
+ /* type end */
+
+ /* new start */
+/* tiêu đề lastestvannew */
+.title2{
+    width: 100%;              /* Chiếm hết chiều ngang để nằm trên cùng */
+    display: flex;
+    align-items: center;      /* Căn thanh ngang giữa chữ */
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.title2::before, .title2::after {
+    content: "";
+    height: 1px;
+    background-color: #ddd;   /* Màu thanh ngang xám nhạt */
+    flex: 1;                  
+    max-width: 250px;         
+}
+.title2 a {
+    text-decoration: none; 
+    color: #333; 
+    transition: 0.3s; 
+}
+.title2 a:hover {
+    color: #e7272d; 
+    text-decoration: none; 
+}
+.title2 a:hover h2 {
+    color: #e7272d;
+}
+.new_container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;              
+    max-width: 1200px;       
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.new_item {
+    flex: 0 1 480px;        
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    transition: 0.3s ease;
+    text-align: center;     
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* đổ bóng */
+}
+
+.new_item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);             
+}
+
+/* Bo góc cho ảnh tin tức */
+.new_img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.new_img img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.new_item:hover .new_img img {
+    transform: scale(1.05); /* Zoom ảnh nhẹ 5% */
+}
+
+.new_meta {
+    padding: 15px 0 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.new-title {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.new-title a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.4;
+    text-decoration: none;
+    display: flex;    
+}
+
+.new_item:hover .new-title a {
+    color: #e7272d;
+}
+.new_dect {
+    padding: 0 20px 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    display: flex;
+}
+
+/*  new end */
+
+
+/* footer start */
+.newsletter-section {
+    /* Ảnh nền Skater - Thêm lớp phủ đen mờ để nổi bật chữ trắng */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.pexels.com/photos/3576534/pexels-photo-3576534.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.newsletter-overlay h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.newsletter-overlay p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 2px 0 0 2px; 
+}
+
+.subscribe-form button {
+    background-color: #e7272d; /* Đỏ Vans */
+    color: #fff;
+    border: none;
+    padding: 0 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0 2px 2px 0; 
+}
+
+.subscribe-form button:hover {
+    background-color: #b31d22;
+}
+.footer-info {
+    background-color: #111111;
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;      /* Dóng hàng đứng với các khối trên */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.footer-col {
+    width: 30%;             /* Chia 3 cột đều nhau */
+}
+
+.footer-col h4 {
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #bbb;            
+    margin-bottom: 10px;
+}
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #e7272d;         
+    padding-left: 5px;     
+}
+
+.copyright {
+    background-color: #000;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    border-top: 1px solid #222;
+}
+
+.red-text {
+    color: #e7272d;
+    font-weight: bold;
+}
+/*  footer end */
