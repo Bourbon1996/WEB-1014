@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+<<<<<<< HEAD
 
 body{
     overflow-x: hidden;
@@ -12,12 +13,18 @@ body{
 ul{
     list-style: none;
 }
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 .top1 {
     background-color: #1a1a1a;
     color: #fff;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 15px 10%;
+=======
+    padding: 15px 24%;
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
     font-size: 14px;
     
 }
@@ -182,12 +189,15 @@ ul{
 }
 /* Heard end */
 
+<<<<<<< HEAD
 .banner{
     width: 100%;
 }
 .banner img{
     object-fit: cover;
 }
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 /*  section */
 /* Khối bao quanh toàn bộ phần sản phẩm */
 .product {
@@ -436,8 +446,11 @@ ul{
 }
 
 /*  new end */
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 /* footer start */
 .newsletter-section {
     /* Ảnh nền Skater - Thêm lớp phủ đen mờ để nổi bật chữ trắng */
@@ -561,4 +574,8 @@ ul{
     color: #e7272d;
     font-weight: bold;
 }
+<<<<<<< HEAD
 /*  footer end */
+=======
+/*  footer end */
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c

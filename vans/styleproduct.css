@@ -5,9 +5,12 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+<<<<<<< HEAD
 ul{
     list-style: none;
 }
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 .top1 {
     background-color: #1a1a1a;
     color: #fff;
@@ -135,8 +138,12 @@ ul{
 .click {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 10px;
 
+=======
+    gap: 20px;
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 }
 
 .search {
@@ -157,9 +164,12 @@ ul{
     position: relative;
     font-size: 18px;
 }
+<<<<<<< HEAD
 .click a{
     text-decoration: none;
 }
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 
 .count {
     background-color: #e7272d;
@@ -513,6 +523,7 @@ ul{
     box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
 }
 /* information end */
+<<<<<<< HEAD
 
 /* banner-2 */
 .banner-2{
@@ -538,6 +549,8 @@ ul{
 
 /* end banner-2 */
 
+=======
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 /* footer start */
 .newsletter-section {
     /* Ảnh nền Skater - Thêm lớp phủ đen mờ để nổi bật chữ trắng */
@@ -661,4 +674,8 @@ ul{
     color: #e7272d;
     font-weight: bold;
 }
+<<<<<<< HEAD
 /*  footer end */
+=======
+/*  footer end */
+>>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
