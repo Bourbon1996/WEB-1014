@@ -22,15 +22,21 @@
             </div>
         </div>
         <div class="top2">
+            <input type="checkbox" id="menu-toggle">
             <div class="logo">
                 <a href="https://vansvietnam.com.vn/">
                     <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/logo.png?1772811679665" alt="">
                 </a>
             </div>
+            <label for="menu-toggle" class="menu-toggle" aria-label="Mo menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
            <nav class="menu">
                 <ul>
                     <li><a href="https://vansvietnam.com.vn/">HOME PAGE</a></li>
-                    <li>
+                    <li class="has-submenu">
                         <a href="https://vansvietnam.com.vn/all-vans">SHOES</a>
                             <ul class="sub_shoes">
                                 <li><a href="#">VANS KNU</a></li>
@@ -43,7 +49,7 @@
                             </ul>
                     </li>
                     <li><a href="https://vansvietnam.com.vn/vans-new-arrivals">NEW ARRIVALS</a></li>
-                    <li>
+                    <li class="has-submenu">
                         <a href="https://vansvietnam.com.vn/all-vans">COLLECTIONS</a>
                             <ul class="sub_collections">
                                 <li><a href="#">CHECKERBOARD</a></li>
@@ -315,7 +321,7 @@
         </div>
     </section>
     <!-- Product end -->
-    
+
  <!-- Footer start -->
   <footer class="main-footer">
     
@@ -371,5 +377,30 @@
 
 </footer>
 <!--  footer end -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const submenuParents = document.querySelectorAll(".menu .has-submenu");
+
+        submenuParents.forEach(function (item) {
+            const trigger = item.querySelector(":scope > a");
+
+            trigger.addEventListener("click", function (event) {
+                if (window.innerWidth > 768) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                submenuParents.forEach(function (otherItem) {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+                });
+
+                item.classList.toggle("open");
+            });
+        });
+    });
+</script>
 </body>
 </html>

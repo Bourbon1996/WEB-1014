@@ -5,12 +5,12 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-<<<<<<< HEAD
+body{
+    overflow-x: hidden;
+}
 ul{
     list-style: none;
 }
-=======
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 .top1 {
     background-color: #1a1a1a;
     color: #fff;
@@ -39,10 +39,29 @@ ul{
     gap:20px;
 }
 
+#menu-toggle {
+    display: none;
+}
+
 /* Logo */
 .logo img {
     width: 200px;
     display: block;
+}
+
+.menu-toggle {
+    display: none;
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 6px 0;
+    background-color: #111;
+    transition: 0.3s ease;
 }
 
 
@@ -60,6 +79,11 @@ ul{
 .menu > ul > li {
     position: relative;   
     padding: 5px 0;
+}
+
+.menu .has-submenu > a::after {
+    content: " +";
+    font-weight: 700;
 }
 
 .menu li a {
@@ -138,12 +162,7 @@ ul{
 .click {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     gap: 10px;
-
-=======
-    gap: 20px;
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 }
 
 .search {
@@ -164,12 +183,9 @@ ul{
     position: relative;
     font-size: 18px;
 }
-<<<<<<< HEAD
 .click a{
     text-decoration: none;
 }
-=======
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 
 .count {
     background-color: #e7272d;
@@ -210,11 +226,16 @@ ul{
     display: grid;
     justify-items: center; 
     gap: 15px;            
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 16px;
 }
 
 .banner h1 {
     font-size: 28px;
     font-weight: 400;
+    text-align: center;
+    word-break: break-word;
 }
 
 .inbanner {
@@ -523,8 +544,6 @@ ul{
     box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
 }
 /* information end */
-<<<<<<< HEAD
-
 /* banner-2 */
 .banner-2{
     margin: 80px 120px;
@@ -543,14 +562,10 @@ ul{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-     transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 
 /* end banner-2 */
-
-=======
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
 /* footer start */
 .newsletter-section {
     /* Ảnh nền Skater - Thêm lớp phủ đen mờ để nổi bật chữ trắng */
@@ -674,8 +689,361 @@ ul{
     color: #e7272d;
     font-weight: bold;
 }
-<<<<<<< HEAD
 /*  footer end */
-=======
-/*  footer end */
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
+
+@media (max-width: 1024px) {
+    .top1 {
+        padding: 12px 5%;
+        font-size: 13px;
+    }
+
+    .top2 {
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    .menu > ul {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .click {
+        margin-left: auto;
+    }
+
+    .banner {
+        padding: 45px 20px;
+    }
+
+    .banner h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tab_logo img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner-2 {
+        margin: 60px 30px;
+    }
+
+    .banner-2 > div {
+        height: 520px;
+    }
+
+    .banner-content {
+        width: 88%;
+        height: 380px;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-col {
+        width: 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top1 {
+        justify-content: flex-end;
+        padding: 12px 15px;
+        background-color: #1f1f1f;
+    }
+
+    .top1_contact {
+        display: none;
+    }
+
+    .top1_user {
+        width: 100%;
+    }
+
+    .top1_user ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .top2 {
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        position: relative;
+        border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+    }
+
+    .logo {
+        order: 1;
+        width: calc(100% - 180px);
+        min-height: 88px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #ededed;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
+        width: 60px;
+        min-height: 88px;
+        padding: 0 14px;
+        border-right: 1px solid #ededed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        order: 4;
+        flex: 1 1 100%;
+        display: none;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .menu-toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #menu-toggle:checked ~ .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .menu > ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menu > ul > li {
+        width: 100%;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 0;
+    }
+
+    .menu li a {
+        display: block;
+        font-size: 12px;
+        white-space: normal;
+        padding: 12px 0;
+    }
+
+    .sub_shoes,
+    .sub_collections {
+        position: static;
+        display: none;
+        min-width: 100%;
+        box-shadow: none;
+        border-top: none;
+        padding: 0 0 8px 12px;
+    }
+
+    .menu .has-submenu.open > .sub_shoes,
+    .menu .has-submenu.open > .sub_collections {
+        display: block;
+    }
+
+    .menu .has-submenu.open > a::after {
+        content: " -";
+    }
+
+    .click {
+        order: 3;
+        justify-content: flex-end;
+        margin-left: 0;
+        width: 120px;
+        gap: 0;
+    }
+
+    .search {
+        width: 60px;
+        min-height: 88px;
+        justify-content: center;
+        border-bottom: none;
+        border-left: 1px solid #ededed;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .search a,
+    .cart a {
+        font-size: 34px;
+        text-decoration: none;
+        color: #111;
+        line-height: 1;
+    }
+
+    .cart {
+        width: 60px;
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #ededed;
+    }
+
+    .count {
+        top: 18px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .banner {
+        padding: 36px 14px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .inbanner {
+        grid-auto-flow: row;
+        justify-items: center;
+        text-align: center;
+        gap: 6px;
+    }
+
+    .inbanner li {
+        word-break: break-word;
+    }
+
+    .product {
+        margin: 30px auto;
+        gap: 24px;
+    }
+
+    .big_image {
+        padding: 16px;
+    }
+
+    .small-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product_info .title {
+        font-size: 22px;
+    }
+
+    .price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .new_price {
+        font-size: 24px;
+    }
+
+    .action {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .buy {
+        min-height: 46px;
+    }
+
+    .tab_buttons {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .tab_buttons button {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .tab_content p,
+    .final-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .banner-2 {
+        margin: 40px 12px;
+    }
+
+    .banner-2 > div {
+        height: 320px;
+    }
+
+    .banner-content {
+        width: 90%;
+        height: 220px;
+    }
+
+    .newsletter-section {
+        padding: 60px 15px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        border-radius: 2px;
+        padding: 14px 18px;
+    }
+
+    .footer-info {
+        padding: 40px 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+}

@@ -18,20 +18,26 @@
             </div>
             <div class="top1_user">
                 <ul>
-                    <li><a href="#">Đăng ký</a> / <a href="#">Đăng nhập</a></li>
+                    <li><a href="indexregister.html">Đăng ký</a> / <a href="indexlogin.html">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
         <div class="top2">
+            <input type="checkbox" id="menu-toggle">
             <div class="logo">
                 <a href="https://vansvietnam.com.vn/">
                     <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/logo.png?1772811679665" alt="">
                 </a>
             </div>
+            <label for="menu-toggle" class="menu-toggle" aria-label="Mo menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
            <nav class="menu">
                 <ul>
                     <li><a href="https://vansvietnam.com.vn/">HOME PAGE</a></li>
-                    <li>
+                    <li class="has-submenu">
                         <a href="https://vansvietnam.com.vn/all-vans">SHOES</a>
                             <ul class="sub_shoes">
                                 <li><a href="#">VANS KNU</a></li>
@@ -44,7 +50,7 @@
                             </ul>
                     </li>
                     <li><a href="https://vansvietnam.com.vn/vans-new-arrivals">NEW ARRIVALS</a></li>
-                    <li>
+                    <li class="has-submenu">
                         <a href="https://vansvietnam.com.vn/all-vans">COLLECTIONS</a>
                             <ul class="sub_collections">
                                 <li><a href="#">CHECKERBOARD</a></li>
@@ -87,11 +93,7 @@
             </div>   
             <div class="product_item">
                 <div class="discout">-10%</div>
-<<<<<<< HEAD
                     <a href="indexproduct.html"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png?v=1625923436960" alt=""></a>
-=======
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png?v=1625923436960" alt="">
->>>>>>> 1452eca1bdc477fdb2a99e8680e82fe4123eba4c
                 <div class="option"><a href="#">TÙY CHỌN</a></div>
                 <div class="infor">
                     <p class="name"><a href="#">VANS CHECKERBOARD SLIP-ON CLASSIC BLACK/OFF WHITE</a></p>
@@ -104,7 +106,7 @@
             
             <div class="product_item">
                 <div class="discout">-20%</div>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-1.jpg?v=1661757331440" alt="">
+                    <a href="indexproduct2.html"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-1.jpg?v=1661757331440" alt=""></a>
                 <div class="option"><a href="#">TÙY CHỌN</a></div>
                 <div class="infor">
                     <p class="name"><a href="#">VANS OLD SKOOL CLASSIC BLACK/WHITE</a></p>
@@ -116,7 +118,7 @@
 
             <div class="product_item">
                 <div class="discout">-10%</div>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-classic-navy-white-vn000d3hnvy-1.jpg?v=1625922070377" alt="">
+                   <a href="indexproduct3.html"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-classic-navy-white-vn000d3hnvy-1.jpg?v=1625922070377" alt=""></a>
                 <div class="option"><a href="#">TÙY CHỌN</a></div>
                 <div class="infor">
                     <p class="name"><a href="#">VANS OLD SKOOL CLASSIC NAVY/WHITE</a></p>
@@ -128,13 +130,25 @@
 
             <div class="product_item">
                 <div class="discout">-10%</div>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317" alt="">
+                    <a href="indexproduct4.html"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317" alt=""></a>
                 <div class="option"><a href="#">TÙY CHỌN</a></div>
                 <div class="infor">
                     <p class="name"><a href="#">VANS AUTHETIC CLASSIC BLACK/WHITE</a></p>
                     <p class="brand"><a href="#">VANS</a></p>
                     <span class="price">1.305.000</span>
                     <span class="old_price">1.450.000</span>
+                </div>
+            </div>
+
+            <div class="product_item">
+                <div class="discout">-10%</div>
+                    <a href="indexproduct5.html"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-knu-skool-black-true-white-vn0009qc6bt-1.jpg?v=1726130441123" alt="VANS KNU SKOOL BLACK/TRUE WHITE"></a>
+                <div class="option"><a href="#">TÙY CHỌN</a></div>
+                <div class="infor">
+                    <p class="name"><a href="#">VANS KNU SKOOL BLACK/TRUE WHITE</a></p>
+                    <p class="brand"><a href="#">VANS</a></p>
+                    <span class="price">2.160.000đ</span>
+                    <span class="old_price">2.400.000đ</span>
                 </div>
             </div>           
         </div>
@@ -247,5 +261,30 @@
 
 </footer>
 <!-- footer end -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const submenuParents = document.querySelectorAll(".menu .has-submenu");
+
+        submenuParents.forEach(function (item) {
+            const trigger = item.querySelector(":scope > a");
+
+            trigger.addEventListener("click", function (event) {
+                if (window.innerWidth > 768) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                submenuParents.forEach(function (otherItem) {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+                });
+
+                item.classList.toggle("open");
+            });
+        });
+    });
+</script>
 </body>
 </html>

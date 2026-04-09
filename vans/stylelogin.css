@@ -5,6 +5,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 ul {
     list-style: none;
 }
@@ -323,4 +327,97 @@ ul {
     background: #ffff;
     color: #e80f2a;
     border: 1px solid #e80f2a;
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        padding: 45px 20px;
+    }
+
+    .banner h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .login-section,
+    .register-section {
+        padding: 56px 20px 72px;
+    }
+
+    .login-wrap,
+    .register-wrap {
+        max-width: 620px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 36px 14px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+    }
+
+    .banner .container {
+        gap: 10px;
+    }
+
+    .banner h1 {
+        font-size: 22px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .inbanner {
+        grid-auto-flow: row;
+        justify-items: center;
+        text-align: center;
+        gap: 6px;
+    }
+
+    .login-section,
+    .register-section {
+        padding: 40px 12px 56px;
+    }
+
+    .login-wrap,
+    .register-wrap {
+        max-width: 100%;
+    }
+
+    .login-wrap h2,
+    .register-wrap h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .login-form,
+    .register-form {
+        gap: 10px;
+    }
+
+    .login-form label,
+    .register-form label {
+        font-size: 15px;
+    }
+
+    .login-form input,
+    .register-form input {
+        height: 44px;
+        padding: 0 14px;
+        font-size: 15px;
+    }
+
+    .login-form button,
+    .register-form button {
+        margin-top: 12px;
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .forgot-link,
+    .login-form span {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+    }
 }
