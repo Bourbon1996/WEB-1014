@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng | VANS</title>
+    <link rel="stylesheet" href="stylecart.css">
+</head>
+<body>
+    <header>
+        <div class="top1">
+            <div class="top1_contact">
+                <ul>
+                    <li><a href="#">cskh.vans@gmail.com</a> / <a href="#">0866956907</a></li>
+                </ul>
+            </div>
+            <div class="top1_user">
+                <ul>
+                    <li><a href="indexregister.html">Đăng ký</a> / <a href="indexlogin.html">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top2">
+            <input type="checkbox" id="menu-toggle">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/logo.png?1772811679665" alt="VANS">
+                </a>
+            </div>
+            <label for="menu-toggle" class="menu-toggle" aria-label="Mo menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">HOME PAGE</a></li>
+                    <li class="has-submenu">
+                        <a href="product.html">SHOES</a>
+                        <ul class="sub_shoes">
+                            <li><a href="product.html">VANS KNU</a></li>
+                            <li><a href="indexproduct2.html">VANS OLD SKOOL</a></li>
+                            <li><a href="indexproduct.html">VANS SLIP-ON</a></li>
+                            <li><a href="indexproduct4.html">VANS AUTHENTIC</a></li>
+                            <li><a href="#">VANS SK8</a></li>
+                            <li><a href="#">VANS ERA</a></li>
+                            <li><a href="#">VAN CLASSIC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">NEW ARRIVALS</a></li>
+                    <li class="has-submenu">
+                        <a href="#">COLLECTIONS</a>
+                        <ul class="sub_collections">
+                            <li><a href="#">CHECKERBOARD</a></li>
+                            <li><a href="#">KNU SKOOL</a></li>
+                            <li><a href="#">VANS VR3</a></li>
+                            <li><a href="#">VANS FLORAL</a></li>
+                            <li><a href="#">SUPER LOWPRO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SALE OFF</a></li>
+                    <li><a href="#">SIZE CHART</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">LATEST VANS NEWS</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                </ul>
+            </nav>
+            <div class="click">
+                <div class="search">
+                    <a href="#">🔍</a>
+                    <input type="text" placeholder="Tìm kiếm">
+                </div>
+                <div class="cart active">
+                    <a href="cart.html">👜 <span class="count" id="cart-count">5</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <h1>Giỏ hàng</h1>
+            <ul class="inbanner">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li>/</li>
+                <li class="check">Giỏ hàng</li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="cart-page">
+        <section class="cart-table-section">
+            <div class="table-head">
+                <div>Sản phẩm</div>
+                <div>Số lượng</div>
+                <div>Tổng tiền</div>
+                <div>Xóa</div>
+            </div>
+
+            <div class="cart-row" data-price="1305000">
+                <div class="product-cell">
+                    <a class="product-thumb" href="indexproduct.html">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png?v=1625923436960" alt="VANS CHECKERBOARD SLIP-ON CLASSIC BLACK/OFF WHITE">
+                    </a>
+                    <div class="product-info">
+                        <a class="product-name" href="indexproduct.html">VANS CHECKERBOARD SLIP-ON CLASSIC BLACK/OFF WHITE</a>
+                        <p class="product-size">38</p>
+                        <p class="unit-price">1.305.000₫</p>
+                    </div>
+                </div>
+                <div class="qty-cell">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <div class="line-total">1.305.000₫</div>
+                <div class="remove-cell">
+                    <button type="button" class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <div class="cart-row" data-price="1572500">
+                <div class="product-cell">
+                    <a class="product-thumb" href="indexproduct2.html">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-1.jpg?v=1661757331440" alt="VANS OLD SKOOL CLASSIC BLACK/WHITE">
+                    </a>
+                    <div class="product-info">
+                        <a class="product-name" href="indexproduct2.html">VANS OLD SKOOL CLASSIC BLACK/WHITE</a>
+                        <p class="product-size">36</p>
+                        <p class="unit-price">1.572.500₫</p>
+                    </div>
+                </div>
+                <div class="qty-cell">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <div class="line-total">1.572.500₫</div>
+                <div class="remove-cell">
+                    <button type="button" class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <div class="cart-row" data-price="1575000">
+                <div class="product-cell">
+                    <a class="product-thumb" href="indexproduct3.html">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-classic-navy-white-vn000d3hnvy-1.jpg?v=1625922070377" alt="VANS OLD SKOOL CLASSIC NAVY/WHITE">
+                    </a>
+                    <div class="product-info">
+                        <a class="product-name" href="indexproduct3.html">VANS OLD SKOOL CLASSIC NAVY/WHITE</a>
+                        <p class="product-size">34.5</p>
+                        <p class="unit-price">1.575.000₫</p>
+                    </div>
+                </div>
+                <div class="qty-cell">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <div class="line-total">1.575.000₫</div>
+                <div class="remove-cell">
+                    <button type="button" class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <div class="cart-row" data-price="1305000">
+                <div class="product-cell">
+                    <a class="product-thumb" href="indexproduct4.html">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317" alt="VANS AUTHENTIC CLASSIC BLACK/WHITE">
+                    </a>
+                    <div class="product-info">
+                        <a class="product-name" href="indexproduct4.html">VANS AUTHENTIC CLASSIC BLACK/WHITE</a>
+                        <p class="product-size">36.5</p>
+                        <p class="unit-price">1.305.000₫</p>
+                    </div>
+                </div>
+                <div class="qty-cell">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <div class="line-total">1.305.000₫</div>
+                <div class="remove-cell">
+                    <button type="button" class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <div class="cart-row" data-price="2040000">
+                <div class="product-cell">
+                    <a class="product-thumb" href="indexproduct5.html">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-knu-skool-black-true-white-vn0009qc6bt-1.jpg?v=1726130441123" alt="VANS KNU SKOOL BLACK/TRUE WHITE">
+                    </a>
+                    <div class="product-info">
+                        <a class="product-name" href="indexproduct5.html">VANS KNU SKOOL BLACK/TRUE WHITE</a>
+                        <p class="product-size">36</p>
+                        <p class="unit-price">2.040.000₫</p>
+                    </div>
+                </div>
+                <div class="qty-cell">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <div class="line-total">2.040.000₫</div>
+                <div class="remove-cell">
+                    <button type="button" class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <div class="empty-cart" id="empty-cart" hidden>Giỏ hàng của bạn đang trống.</div>
+
+            <div class="cart-summary">
+                <div class="summary-total">
+                    <span>Tổng tiền</span>
+                    <strong id="grand-total">7.797.500₫</strong>
+                </div>
+                <div class="summary-actions">
+                    <a href="index.html" class="btn btn-light">Tiếp tục mua hàng</a>
+                    <a href="checkout.html" class="btn btn-primary">Tiến hành thanh toán</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="newsletter-section">
+            <div class="newsletter-overlay">
+                <h2>NHẬP EMAIL</h2>
+                <p>Để nhận tin tức khuyến mãi từ cửa hàng của chúng tôi</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit">Gửi ngay</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Trải Nghiệm VANS Store Ngay Tại Nhà</h4>
+                    <p><strong>Hệ Thống VANS Việt Nam Online</strong></p>
+                    <a class="map" href="https://maps.app.goo.gl/cSCM8WRkczPGFZMM9">
+                        <p>Địa chỉ: Lầu 4 (Tòa Nhà Thái Sơn) Số 3 đường 3 Tháng 2, P.11, Quận 10, TP.HCM</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d823.9618558310293!2d106.68083320611967!3d10.777173572855004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f26664899a5%3A0x57e38f91af766401!2zVOG7lW5nIEPDtG5nIHR5IFRow6FpIFPGoW4gLSBC4buZIFF14buRYyBQaMOybmc!5e0!3m2!1svi!2s!4v1776142835993!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
+                    <p>Hotline: 0866956907</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Size Chart</a></li>
+                        <li><a href="#">Hệ Thống Cửa Hàng</a></li>
+                        <li><a href="#">ZALO Business: 0866956907</a></li>
+                        <li><a href="#">Email: cskh.vans@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính Sách</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách vận chuyển và giao hàng</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© Bản quyền thuộc về <span class="red-text">VANS Việt Nam</span> | Cung cấp bởi VANS</p>
+        </div>
+        <div class="footer__zalo">
+                <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+    </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const submenuParents = document.querySelectorAll(".menu .has-submenu");
+            const totalElement = document.getElementById("grand-total");
+            const countElement = document.getElementById("cart-count");
+            const emptyElement = document.getElementById("empty-cart");
+
+            function formatCurrency(value) {
+                return value.toLocaleString("vi-VN") + "₫";
+            }
+
+            function updateCart() {
+                const rows = Array.from(document.querySelectorAll(".cart-row"));
+                let grandTotal = 0;
+                let itemCount = 0;
+
+                rows.forEach(function (row) {
+                    const price = Number(row.dataset.price);
+                    const input = row.querySelector(".qty-input");
+                    const quantity = Math.max(1, Number(input.value) || 1);
+                    input.value = quantity;
+                    const lineTotal = price * quantity;
+                    row.querySelector(".line-total").textContent = formatCurrency(lineTotal);
+                    grandTotal += lineTotal;
+                    itemCount += quantity;
+                });
+
+                totalElement.textContent = formatCurrency(grandTotal);
+                countElement.textContent = itemCount;
+                emptyElement.hidden = rows.length !== 0;
+            }
+
+            submenuParents.forEach(function (item) {
+                const trigger = item.querySelector(":scope > a");
+                trigger.addEventListener("click", function (event) {
+                    if (window.innerWidth > 768) {
+                        return;
+                    }
+                    event.preventDefault();
+                    submenuParents.forEach(function (otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("open");
+                        }
+                    });
+                    item.classList.toggle("open");
+                });
+            });
+
+            document.querySelectorAll(".cart-row").forEach(function (row) {
+                const input = row.querySelector(".qty-input");
+                const minus = row.querySelector(".minus");
+                const plus = row.querySelector(".plus");
+                const remove = row.querySelector(".remove-btn");
+
+                minus.addEventListener("click", function () {
+                    input.value = Math.max(1, Number(input.value) - 1);
+                    updateCart();
+                });
+
+                plus.addEventListener("click", function () {
+                    input.value = Number(input.value) + 1;
+                    updateCart();
+                });
+
+                input.addEventListener("input", updateCart);
+
+                remove.addEventListener("click", function () {
+                    row.remove();
+                    updateCart();
+                });
+            });
+
+            updateCart();
+        });
+    </script>
+</body>
+</html>

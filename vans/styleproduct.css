@@ -423,6 +423,10 @@ ul{
     text-transform: uppercase;
     cursor: pointer;
     font-size: 15px;
+    
+}
+a{
+    text-decoration: none;
 }
 
 .buy:hover {
@@ -688,6 +692,21 @@ ul{
 .red-text {
     color: #e7272d;
     font-weight: bold;
+}
+.map{
+    position: relative;
+}
+.map iframe{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -450px;
+    right: -200px;
+    transition: 0.5s;
+}
+.map:hover iframe{
+    visibility: visible;
+    opacity: 1;
 }
 /*  footer end */
 
@@ -1045,5 +1064,75 @@ ul{
 
     .footer-col {
         width: 100%;
+    }
+}
+.footer__zalo {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #0568ff;
+    opacity: 1;
+}
+
+.zalo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+    position: relative;
+    animation: zalo 1s infinite;
+}
+.footer__zalo::before{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: inherit;
+    border-radius: 50%;
+    animation: waves 2s linear infinite;
+}
+.footer__zalo::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: inherit;
+    border-radius: 50%;
+    animation: waves 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes zalo{
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+    
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes waves{
+    from{
+        transform: scale(1);
+        opacity: 0.2;
+    } 
+    to{
+        transform: scale(2);
+        opacity: 0;
     }
 }
